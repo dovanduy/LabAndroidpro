@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:elevation="5dp"
+        android:background="@drawable/top_bar">
+
+        <ImageButton
+            android:id="@+id/returnLogoIB"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@drawable/returnlogo"
+            android:scaleType="fitXY"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="45dp"
+            android:text="创建的音频列表"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:gravity="start"
+            android:layout_gravity="center" />
+        <ImageView
+            android:id="@+id/addNewSetIV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="12dp"
+            android:src="@drawable/icon_add_white"
+            android:layout_gravity="center_vertical"
+            android:background="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/shiftBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/barback03">
+
+        <TextView
+            android:id="@+id/pc_file"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/barback03_left_pressed"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="电脑音频列表"
+            android:textColor="#FF5050"
+            android:textSize="12sp" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#e65757"/>
+
+        <TextView
+            android:id="@+id/app_file"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/barback03_right_normal"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="本地音频列表"
+            android:textColor="#707070"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fileSGV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:focusable="true"
+        android:background="#fff" />
+
+</LinearLayout>
