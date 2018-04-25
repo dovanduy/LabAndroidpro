@@ -75,4 +75,4 @@ public class AppItem implements Comparable {
     public int compareTo(@NonNull Object o) {
         return this.appName.compareTo(((AppItem) o).appName);
     }
-}
+ }

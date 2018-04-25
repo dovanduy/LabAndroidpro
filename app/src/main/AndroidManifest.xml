@@ -34,6 +34,29 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- end: baidu speech sdk  权限 -->
+    <!--
+    离线功能即离线命令词及唤醒词功能开启需要正式授权，正式授权完全由SDK自动管理：
+    1. 在百度语音开放平台注册应用，http://yuyin.baidu.com/app
+    2. 给在百度语音开放平台注册应用绑定包名。本demo的包名是com.baidu.speech.recognizerdemo，在build.gradle文件中查看。
+    3. 在当前应用的AndroidManifest.xml中填写相应的APP_ID API_KEY SECRET_KEY
+    4. 首次使用联网。正式授权目前有效期三年，三年之后的最后一个月尝试更新正式授权。
+    另外需要注意的是优先在线识别，即离线命令词识别功能在在线（包括2G网络）的情况下自动不启用。。
+-->
+    <!--
+    再次重复！！填写APP_ID 时请检查在官网的该应用内是否设置了正确包名。否则会导致唤醒词及离线功能无法使用。
+     本demo的包名是com.baidu.speech.recognizerdemo，在build.gradle文件中查看。
+     如果遇见“app name unknown"的错误， 极可能为包名设置错误
+      -->
+    <!-- 正式发布时，请替换成您自己的appId 本demo的appId会不定时下线 -->
+    <meta-data
+        android:name="com.baidu.speech.APP_ID"
+        android:value="11093043" />
+    <meta-data
+        android:name="com.baidu.speech.API_KEY"
+        android:value="bnRH7Tvc913OfO3vpirWHq1N" />
+    <meta-data
+        android:name="com.baidu.speech.SECRET_KEY"
+        android:value="fWCYpKGXidnHcoqsKOt6KQgDT0DgolHb" />
 
     <application
         android:name="com.dkzy.areaparty.phone.myapplication.MyApplication"

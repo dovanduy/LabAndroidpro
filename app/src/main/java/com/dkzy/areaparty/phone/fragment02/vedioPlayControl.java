@@ -422,7 +422,7 @@ public class vedioPlayControl extends AppCompatActivity {
 
     class MySeekbar implements OnSeekBarChangeListener {
         public void onProgressChanged(SeekBar seekBar, int progress,
-                                      boolean fromUser) {
+                                      boolean fromUxser) {
         }
 
         public void onStartTrackingTouch(SeekBar seekBar) {
