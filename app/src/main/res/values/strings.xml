@@ -2,7 +2,71 @@
     <string name="app_name">AreaParty</string>
     <string name="rebootHelper">即将重启电脑，此过程将无法获取监控信息。\n一旦重启成功，应用将自动获取监控信息。\n重启前请确保电脑能够开机自动登录。</string>
     <string name="autoLoginLinker">windows开机自动登录指南</string>
+    //百度语音
+    <string name="please_speak">请说话</string>
+    <string name="speaking">说话中</string>
 
+    <string name="start">开始</string>
+    <string name="setting">设置</string>
+
+    <string name="infile_default"></string>
+    <string-array name="infile_list">
+        <item>@string/infile_default</item>
+        <item>res:///com/baidu/android/voicedemo/16k_test.pcm, 16k采样的测试音频</item>
+        <item>res:///com/baidu/android/voicedemo/offline_input.pcm, 测试离线命令词</item>
+        <item>#com.baidu.android.voicedemo.recognization.inputstream.InFileStream.create16kStream(), 文件流</item>
+        <item>#com.baidu.android.voicedemo.recognization.inputstream.MyMicrophoneInputStream.getInstance(), 自行从麦克风读取</item>
+    </string-array>
+
+    <string name="decoder_default"></string>
+    <string-array name="decoder_list">
+        <item>@string/decoder_default</item>
+        <item>0, 纯在线</item>
+        <item>2, 离线命令词及在线识别混合, 在线优先</item>
+    </string-array>
+
+    <string name="pid_default"></string>
+    <string-array name="pid">
+        <item>@string/pid_default</item>
+        <item>1536, 普通话搜索模型(默认)</item>
+        <item>1537, 普通话输入法模型 </item>
+        <item>15361, 普通话搜索模型（在线语义） </item>
+        <item>1936, 普通话远场模型 </item>
+        <item>19361,普通话远场模型（在线语义） </item>
+        <item>1737, 英语</item>
+        <item>1637, 粤语</item>
+        <item>1837, 四川话</item>
+    </string-array>
+
+    <string name="nlu_default"></string>
+    <string-array name="nlu_list">
+        <item>@string/nlu_default</item>
+        <item>enable, 开启本地语义解析（不支持英语）</item>
+        <item>enable-all, 在enable参数基础上,临时解析结果也做本地语义分析</item>
+        <item>disable, 不适用语义解析</item>
+    </string-array>
+
+    <string name="vad_default"></string>
+    <string-array name="vad_list">
+        <item>@string/vad_default</item>
+        <item>dnn, 默认，推荐模型</item>
+        <item>touch,  关闭静音断句功能。用戶手动停止录音</item>
+    </string-array>
+    <string name="_model_default"></string>
+    <string-array name="_model_list">
+        <item>@string/vad_default</item>
+        <item>search, 搜索模型，默认， 适用于短句， 无逗号，可以有语义</item>
+        <item>input, 输入法模型，适用于长句及长语音，有逗号分割， 无语义</item>
+        <item>far, 远场模型，高级，适用于音源离麦克风较远(>1m)的录音，有逗号分割， 可以有语义</item>
+    </string-array>
+    <string name="vad_timeout_default"></string>
+    <string-array name="vad_timeout_list">
+        <item>@string/vad_timeout_default</item>
+        <item>0, 开启长语音（离线不支持）。建议输入法模型。</item>
+        <item>800, 毫秒，静音800ms后断句，适用于输入短语</item>
+        <item>2000, 毫秒，静音2000ms后断句，适用于输入长句</item>
+        <item>2230, 毫秒，请修改代码中的VAD_ENDPOINT_TIMEOUT，自定义时长（建议800ms-3000ms之间）</item>
+    </string-array>
     //TabHost页头
     <string name="title_section1">蓝牙设备</string>
     <string name="title_section2">其他设备</string>
@@ -35,4 +99,5 @@
     <string name="info6"><p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;本栏目下方的<b>速传用户</b>为好友中可以点对点直传（打洞直传）文件的用户；<b>推荐用户</b>为系统中分享文件被下载成功次数排名靠前的用户。</p></string>
     <string name="info7"><p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;用户如果需要分享文件给好友，需要先在首页上部点击<b>文件</b>进入文件管理界面，找到相应文件后，长按对应文件，出现多选框后，勾选要分享的文件，然后在下方点击<b>更多</b> -> <b>分享</b>，分享时需要自定义文件描述信息，并可以输入该文件备份在网盘上的链接及密码（如有）。</p></string>
     <string name="info8"><p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p></string>
+
 </resources>
