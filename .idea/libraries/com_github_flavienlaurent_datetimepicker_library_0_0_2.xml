@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.github.flavienlaurent.datetimepicker:library-0.0.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-0.0.2.aar/6172675723e33f1c054c3d6fb36236ed/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-0.0.2.aar/6172675723e33f1c054c3d6fb36236ed/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-0.0.2.aar/19d101da9a5379934889c6409572006b/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-0.0.2.aar/19d101da9a5379934889c6409572006b/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

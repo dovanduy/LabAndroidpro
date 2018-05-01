@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="org.simple:androideventbus-1.0.5.1">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androideventbus-1.0.5.1.aar/c0f4d6d6fdba7bd95d0fd8671fb054ac/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androideventbus-1.0.5.1.aar/c0f4d6d6fdba7bd95d0fd8671fb054ac/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androideventbus-1.0.5.1.aar/d28500cdfdccbdda18ddc0d91f1c01df/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/androideventbus-1.0.5.1.aar/d28500cdfdccbdda18ddc0d91f1c01df/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

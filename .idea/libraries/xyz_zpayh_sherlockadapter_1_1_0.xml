@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="xyz.zpayh:sherlockadapter-1.1.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sherlockadapter-1.1.0.aar/8600872202405fc610da83b2a6aa2ca5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sherlockadapter-1.1.0.aar/8600872202405fc610da83b2a6aa2ca5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sherlockadapter-1.1.0.aar/cec9632721d84393c91c5321dddf69aa/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sherlockadapter-1.1.0.aar/cec9632721d84393c91c5321dddf69aa/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

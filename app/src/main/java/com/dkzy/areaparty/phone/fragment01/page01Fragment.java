@@ -24,12 +24,13 @@ import android.widget.Toast;
 import com.dkzy.areaparty.phone.Login;
 import com.dkzy.areaparty.phone.MainActivity;
 import com.dkzy.areaparty.phone.R;
+
+import com.dkzy.areaparty.phone.WakeUp.ActivityMiniRecog;
+import com.dkzy.areaparty.phone.WakeUp.ActivityMiniWakeUp;
 import com.dkzy.areaparty.phone.androideventbusutils.events.TVPCNetStateChangeEvent;
 import com.dkzy.areaparty.phone.androideventbusutils.events.changeSelectedDeviceNameEvent;
 import com.dkzy.areaparty.phone.fragment01.base.GlideImageLoader;
 import com.dkzy.areaparty.phone.fragment01.setting.SettingMainActivity;
-import com.dkzy.areaparty.phone.fragment01.ui.ActionDialog_launch;
-import com.dkzy.areaparty.phone.fragment01.ui.ActionDialog_page;
 import com.dkzy.areaparty.phone.fragment01.utils.tvpcAppHelper;
 import com.dkzy.areaparty.phone.fragment01.websitemanager.start.StartActivity;
 import com.dkzy.areaparty.phone.fragment03.Model.AppItem;
@@ -80,7 +81,7 @@ public class page01Fragment extends Fragment implements View.OnClickListener {
     private View rootView;
     private ScrollView scrollView;
     private Banner bannerB;
-    private LinearLayout PCDevicesLL, TVDevicesLL, blueDevicesLL, settingLL;
+    private LinearLayout PCDevicesLL, TVDevicesLL, blueDevicesLL, settingLL,voice_controlLL,init_voiceLL;
     private LinearLayout lastPCInforLL,  lastTVInforLL;
     private TextView isLastUsedPCExistTV, isLastUsedTVExistTV;
     private TextView lastPCInforNameTV,  lastTVInforNameTV;
@@ -110,6 +111,14 @@ public class page01Fragment extends Fragment implements View.OnClickListener {
                 startActivity(intent);
             }
                 break;
+//          此处为新添加语音控制实验模块按钮，将跳往语音控制界面,暂时不知为何不能用，该换一种跳转方式
+            case R.id.voice_controlLL:
+                startActivity(new Intent(mContext, ActivityMiniWakeUp.class));
+                break;
+            case R.id.init_voice:
+                startActivity(new Intent(mContext, ActivityMiniRecog.class));
+                break;
+//            ---------------------------------------------------------
             case R.id.lastPCInforLL:
                 if(MyApplication.selectedPCVerified && MyApplication.isSelectedPCOnline())
                     startActivity(new Intent(getActivity(), computerMonitorActivity.class));
@@ -295,6 +304,10 @@ public class page01Fragment extends Fragment implements View.OnClickListener {
         TVDevicesLL = (LinearLayout) rootView.findViewById(R.id.TVDevicesLL);
         blueDevicesLL = (LinearLayout) rootView.findViewById(R.id.blueDevicesLL);
         settingLL = (LinearLayout) rootView.findViewById(R.id.settingLL);
+//        ------------------------------------------
+        voice_controlLL = (LinearLayout) rootView.findViewById(R.id.voice_controlLL);
+        init_voiceLL = (LinearLayout) rootView.findViewById(R.id.init_voice);
+//        -----------------------------------------------
         lastPCInforLL = (LinearLayout) rootView.findViewById(R.id.lastPCInforLL);
         lastTVInforLL = (LinearLayout) rootView.findViewById(R.id.lastTVInforLL);
         lastPCInforNameTV = (TextView) rootView.findViewById(R.id.lastPCInforNameTV);
@@ -422,8 +435,8 @@ public class page01Fragment extends Fragment implements View.OnClickListener {
         lastTVInforLL.setOnClickListener(this);
         settingLL.setOnClickListener(this);
         helpInfo.setOnClickListener(this);
-
-
+        voice_controlLL.setOnClickListener(this);
+        init_voiceLL.setOnClickListener(this);
         bannerB.setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(int position) {

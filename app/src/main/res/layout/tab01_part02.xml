@@ -105,6 +105,40 @@
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/voice_controlLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_bar"
+                android:text="唤醒"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/init_voice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_bar"
+                android:text="初始化"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
