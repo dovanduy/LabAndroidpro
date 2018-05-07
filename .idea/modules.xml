@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LabAndroidpro.iml" filepath="$PROJECT_DIR$/LabAndroidpro.iml" />
+      <module fileurl="file://E:\androidLABpro\AreaParty\new_AreaParty-master (1)\new_AreaParty-master\LabAndroidpro.iml" filepath="E:\androidLABpro\AreaParty\new_AreaParty-master (1)\new_AreaParty-master\LabAndroidpro.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mth/mth.iml" filepath="$PROJECT_DIR$/mth/mth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/new_AreaParty-master.iml" filepath="$PROJECT_DIR$/new_AreaParty-master.iml" />
     </modules>
   </component>
 </project>

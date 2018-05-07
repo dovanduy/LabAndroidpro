@@ -12,6 +12,8 @@ import com.baidu.speech.EventManager;
 import com.baidu.speech.EventManagerFactory;
 import com.baidu.speech.asr.SpeechConstant;
 import com.dkzy.areaparty.phone.R;
+import com.dkzy.areaparty.phone.fragment03.utils.TVAppHelper;
+import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
@@ -49,6 +51,8 @@ public class ActivityMiniWakeUp extends AppCompatActivity implements EventListen
         json = new JSONObject(params).toString();
         wakeup.send(SpeechConstant.WAKEUP_START, json, null, 0, 0);
         printLog("输入参数：" + json);
+//        ---------------------------------
+//        System.out.println(params);
     }
 
     private void stop() {
@@ -88,13 +92,47 @@ public class ActivityMiniWakeUp extends AppCompatActivity implements EventListen
     //   EventListener  回调方法
     @Override
     public void onEvent(String name, String params, byte[] data, int offset, int length) {
-        String logTxt = "name: " + name;
+    /*    String logTxt = "name: " + name;
         if (params != null && !params.isEmpty()) {
             logTxt += " ;params :" + params;
         } else if (data != null) {
             logTxt += " ;data length=" + data.length;
         }
         printLog(logTxt);
+        System.out.println(params);*/
+//    以上为DEMO自带的调用方式，现在改换自己写
+//        Log.d(TAG, String.format("event: name=%s, params=%s", name, params));
+
+        //唤醒成功
+        if(name.equals("wp.data")){
+            try {
+                Gson gson = new Gson();
+                WakeUpInstruction wakeUpInstruction = gson.fromJson(params,WakeUpInstruction.class);
+                int errorCode = wakeUpInstruction.getErrorCode();
+                if(errorCode == 0){
+                    //唤醒成功
+                    if(wakeUpInstruction.getWord().equals("增大音量")){
+                        TVAppHelper.vedioPlayControlVolumeUp();
+                        printLog(wakeUpInstruction.getWord());
+                    }
+                    else if(wakeUpInstruction.getWord().equals("减小音量")){
+                        TVAppHelper.vedioPlayControlVolumeDown();
+                        printLog(wakeUpInstruction.getWord());
+                    }
+                    printLog(wakeUpInstruction.getErrorDesc());
+                    printLog(wakeUpInstruction.getWord());
+                } else {
+                    //唤醒失败
+                    printLog(wakeUpInstruction.getErrorDesc());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if("wp.exit".equals(name)){
+            //唤醒已停止
+        }
+
+
     }
 
     private void printLog(String text) {
